@@ -194,14 +194,9 @@
         return "Permanent resident required";
       }
 
-      // For student visa restrictions
-      if (
-        cleanPhrase.toLowerCase().includes("cpt") ||
-        cleanPhrase.toLowerCase().includes("opt")
-      ) {
-        return cleanPhrase.length > 30
-          ? cleanPhrase.substring(0, 27) + "..."
-          : cleanPhrase;
+      // For student visa restrictions - check for word boundaries
+      if (/\bcpt\b/i.test(cleanPhrase) || /\bopt\b/i.test(cleanPhrase)) {
+        return "OPT/CPT restriction";
       }
 
       // Generic fallback - just truncate
@@ -291,17 +286,21 @@
       /sponsorship.*will not.*provided/i,
     ];
 
-    // Student visa restriction patterns
+    // Student visa restriction patterns - more specific to avoid false positives
     const studentVisaPatterns = [
-      /cpt.*not.*eligible/i,
-      /opt.*not.*eligible/i,
-      /f-?1.*not.*eligible/i,
-      /j-?1.*not.*eligible/i,
-      /students.*cpt.*not.*eligible/i,
-      /students.*opt.*not.*eligible/i,
-      /students.*f-?1.*not.*eligible/i,
+      /\bcpt\b.*not.*eligible/i,
+      /\bopt\b.*not.*eligible/i,
+      /\bf-?1\b.*not.*eligible/i,
+      /\bj-?1\b.*not.*eligible/i,
+      /students.*\bcpt\b.*not.*eligible/i,
+      /students.*\bopt\b.*not.*eligible/i,
+      /students.*\bf-?1\b.*not.*eligible/i,
       /does not support.*students.*visa/i,
       /not support.*students.*visa/i,
+      /\bcpt\b.*students.*not.*supported/i,
+      /\bopt\b.*students.*not.*supported/i,
+      /no.*\bopt\b.*students/i,
+      /no.*\bcpt\b.*students/i,
     ];
 
     // Permanent residency patterns
