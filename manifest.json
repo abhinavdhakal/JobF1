@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "JobF1 - Visa-Friendly Job Finder",
+  "version": "1.4",
+  "description": "Filter LinkedIn jobs by posting time, job type, and visa sponsorship. Instantly identifies visa-friendly opportunities for F1 students.",
+  "permissions": ["tabs", "storage", "webNavigation", "activeTab"],
+  "host_permissions": ["*://*.linkedin.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/jobs/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}

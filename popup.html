@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>JobF1</h2>
+
+      <label>Time Posted</label>
+      <select id="timeSelect">
+        <option value="300">Last 5 min</option>
+        <option value="600">Last 10 min</option>
+        <option value="900">Last 15 min</option>
+        <option value="1800">Last 30 min</option>
+        <option value="3600">Last 1 hour</option>
+        <option value="21600">Last 6 hours</option>
+        <option value="86400">Last 24 hours</option>
+        <option value="604800" selected>Last 1 week</option>
+        <option value="2592000">Last 1 month</option>
+        <option value="0">Any time</option>
+      </select>
+
+      <label>Keywords (what job you're looking for)</label>
+      <input
+        type="text"
+        id="keywordInput"
+        placeholder="e.g. software engineer, data scientist, firmware"
+      />
+
+      <label>Job Type</label>
+      <select id="jobTypeSelect">
+        <option value="">All</option>
+        <option value="I">Internship</option>
+        <option value="F">Full-time</option>
+      </select>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="filterCitizenshipCheckbox" />
+        <label for="filterCitizenshipCheckbox"
+          >Check sponsorship requirements</label
+        >
+      </div>
+
+      <button id="saveBtn">Apply</button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
