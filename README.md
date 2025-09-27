@@ -2,6 +2,8 @@
 
 A Chrome extension that enhances LinkedIn job searching for international students and visa holders. Automatically filters jobs by time, keywords, and job type while detecting visa sponsorship requirements.
 
+![preview of the extension](./preview.png)
+
 ## Features
 
 - **Time Filters**: Filter jobs by posting time (5 min to 1 month, or any time)
