@@ -1,117 +1,86 @@
 # JobF1 - Visa-Friendly Job Finder
 
-A Chrome extension that enhances LinkedIn job searching for international students and visa holders. Automatically filters jobs by time, keywords, and job type while detecting visa sponsorship requirements.
+As international students, we often struggled with LinkedIn job searches. You’d spend hours scrolling, only to realize the posting required US citizenship or didn’t sponsor visas. JobF1 fixes that.
+
+It’s a Chrome extension that filters LinkedIn jobs by time, keywords, and type—while automatically flagging sponsorship restrictions. No more wasted time applying to jobs you’re not eligible for.
 
 ![preview of the extension](./preview.png)
 
-## Features
+---
 
-- **Visa Sponsorship Detection**: Automatically analyzes job descriptions for visa restrictions
-- **Real-time Analysis**: Instant notifications about sponsorship requirements
-- **Time Filters**: Filter jobs by posting time (5 min to 1 month, or any time)
-- **Smart Keywords**: Search with Boolean operators for precise job matching
-- **Job Type Filtering**: Filter by internships, full-time, or all positions
+## What It Does
 
-## Installation
+* Detects visa restrictions in job descriptions (citizenship, ITAR, no sponsorship, etc.)
+* Filters jobs by posting time (5 minutes to 1 month)
+* Smart keyword search with Boolean support
+* Job type filtering: internships, full-time, or all
+* Clear green/red indicators with reasons for sponsorship status
 
-### Manual Installation (Developer Mode)
+---
 
-1. **Download the Extension**
+## Example
 
-   - Clone or download this repository
-   - Extract files if downloaded as ZIP
+Searching for **Software Engineer Intern**:
 
-2. **Enable Developer Mode**
+* Job A → Requires US Citizenship
+* Job B → Visa-friendly
+* Job C → States "No sponsorship available"
 
-   - Open Chrome and go to `chrome://extensions/`
-   - Toggle "Developer mode" in the top-right corner
+Result: you instantly know which jobs are worth your time.
 
-3. **Load the Extension**
+---
 
-   - Click "Load unpacked"
-   - Select the JobF1 folder containing the extension files
-   - The extension should appear in your extensions list
+## Visual Indicators
 
-4. **Pin the Extension** (Recommended)
-   - Click the puzzle piece icon in Chrome's toolbar
-   - Pin JobF1 for easy access
+* Green notification = Visa-friendly or unrestricted job
+  ![Visa Friendly](./friendly.png)
+
+* Red notification = Job with visa restrictions (citizenship, no sponsorship, ITAR, etc.)
+  ![Visa Restricted](./restriction.png)
+
+---
+
+## Install
+
+### Manual Setup (Developer Mode)
+
+1. Clone or download this repo
+2. Go to `chrome://extensions/` in Chrome
+3. Enable Developer Mode (top-right)
+4. Click **Load unpacked** and select the JobF1 folder
+5. Pin the extension for easy access
+
+---
 
 ## Usage
 
-### Basic Setup
+1. Click the JobF1 icon in Chrome
+2. Set filters:
 
-1. Click the JobF1 extension icon
-2. Configure your preferences:
+   * Time posted
+   * Keywords
+   * Job type
+   * Visa sponsorship check
+3. Apply filters → LinkedIn updates instantly
 
-   - **Time Posted**: Choose how recent jobs should be
-   - **Keywords**: Enter job titles/skills (comma-separated)
-   - **Job Type**: Select internship, full-time, or all
-   - **Check sponsorship requirements**: Enable visa analysis
+---
 
-3. Click "Apply" to activate filters
+## Tech
 
-### Features in Detail
+* Chrome Extension (Manifest V3)
+* JavaScript (ES6+)
+* Runs fully local, no data collection
 
-#### Time Filtering
+---
 
-- Select from 5 minutes to 1 month
-- Choose "Any time" to disable time filtering
-- Automatically applied to LinkedIn searches
+## Notes
 
-#### Keyword Search
+* Works only on LinkedIn job pages
+* Data stays on your machine—no external servers
+* Use responsibly within LinkedIn’s terms of service
 
-- Use comma-separated keywords: `software engineer, data scientist`
-- Automatically adds Boolean operators for precise matching
-- Combines with job type filters intelligently
-
-#### Visa Sponsorship Analysis
-
-- **Enable**: Check "Check sponsorship requirements"
-- **Automatic Detection**: Analyzes job descriptions for:
-  - ITAR/Export control requirements
-  - US citizenship requirements
-  - Security clearance needs
-  - Direct "no sponsorship" statements
-  - Student visa restrictions
-
-#### Visual Indicators
-
-- **🚨 Red notification**: Visa restrictions found
-- **✅ Green notification**: Visa-friendly or no restrictions detected
-- **Detailed reasons**: Shows specific text that triggered the analysis
-
-### Tips
-
-- Enable visa checking only when needed to save performance
-- Use specific keywords for better job matching
-- Combine filters for targeted job searches
-- Notifications auto-dismiss after 8-12 seconds
-
-## Technical Details
-
-- **Manifest Version**: 3
-- **Permissions**: tabs, storage, webNavigation, activeTab
-- **Host Permissions**: LinkedIn.com only
-- **Content Script**: Analyzes job pages in real-time
-- **Background Service**: Handles navigation and URL filtering
-
-## Compatibility
-
-- **Chrome**: Version 88+
-- **Platform**: LinkedIn Jobs only
-- **Languages**: JavaScript (ES6+)
-
-## Privacy
-
-- **Data Storage**: Preferences stored locally in Chrome
-- **No External Servers**: All processing done locally
-- **No Data Collection**: Extension doesn't collect personal information
-- **LinkedIn Only**: Works exclusively on LinkedIn job pages
-
-## Contributing
-
-Feel free to submit issues or pull requests to improve the extension.
+---
 
 ## License
 
-This project is open source. Please respect LinkedIn's terms of service when using this extension.
+MIT License
