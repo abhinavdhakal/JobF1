@@ -27,4 +27,4 @@ Saved preferences remain in Chrome storage until the user removes the extension 
 
 ## Contact
 
-If you have questions about this privacy policy, contact the developer at your-email@example.com.
+If you have questions about this privacy policy, contact the developer at abhinavdhakal2@gmail.com.
