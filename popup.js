@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!keywordsString.trim()) {
       // If no keywords but job type selected, return appropriate search
       if (jobType === "I") {
-        return 'intern OR internship OR "co-op" OR coop OR trainee';
+        return 'intern OR "internship co-op"';
       }
       return "";
     }
@@ -48,9 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Append job type modifiers for keyword search only
     if (jobType === "I") {
-      query += ' AND (intern OR internship OR "co-op" OR coop OR trainee)';
+      query += ' AND (intern OR "internship co-op")';
     } else if (jobType === "F") {
-      query += ' AND NOT (intern OR internship OR "co-op" OR coop OR trainee)';
+      query += ' AND NOT (intern OR "internship co-op")';
     }
 
     return query;

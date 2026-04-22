@@ -1,8 +1,8 @@
-# JobF1 - Visa-Friendly Job Finder
+# JobF1 for LinkedIn - Visa-Friendly Job Finder
 
-As international students, we often struggled with LinkedIn job searches. You’d spend hours scrolling, only to realize the posting required US citizenship or didn’t sponsor visas. JobF1 fixes that.
+As international students, we often struggled with LinkedIn job searches. You’d spend hours scrolling, only to realize the posting required US citizenship or didn’t sponsor visas. JobF1 for LinkedIn fixes that.
 
-It’s a Chrome extension that filters LinkedIn jobs by time, keywords, and type—while automatically flagging sponsorship restrictions. No more wasted time applying to jobs you’re not eligible for.
+It’s a Chrome extension built specifically for LinkedIn that filters jobs by time, keywords, and type—while automatically flagging sponsorship restrictions. No more wasted time applying to jobs you’re not eligible for.
 
 ![preview of the extension](./preview.png)
 
