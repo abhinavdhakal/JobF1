@@ -1,8 +1,8 @@
-# JobF1 for LinkedIn - Visa-Friendly Job Finder
+# LinkScreen for LinkedIn - Visa Sponsorship Job Finder
 
-As international students, we often struggled with LinkedIn job searches. You’d spend hours scrolling, only to realize the posting required US citizenship or didn’t sponsor visas. JobF1 for LinkedIn fixes that.
+LinkScreen helps you find visa-friendly roles on LinkedIn. Instead of manually scanning job posts for sponsorship language, LinkScreen automatically detects visa restrictions and flags eligible opportunities.
 
-It’s a Chrome extension built specifically for LinkedIn that filters jobs by time, keywords, and type—while automatically flagging sponsorship restrictions. No more wasted time applying to jobs you’re not eligible for.
+It's a Chrome extension built specifically for LinkedIn that filters jobs by time, keywords, and type—while automatically detecting sponsorship restrictions. No more wasted time applying to jobs you're not eligible for.
 
 ![preview of the extension](./preview.png)
 
@@ -47,14 +47,14 @@ Result: you instantly know which jobs are worth your time.
 1. Clone or download this repo
 2. Go to `chrome://extensions/` in Chrome
 3. Enable Developer Mode (top-right)
-4. Click **Load unpacked** and select the JobF1 folder
+4. Click **Load unpacked** and select the LinkScreen folder
 5. Pin the extension for easy access
 
 ---
 
 ## Usage
 
-1. Click the JobF1 icon in Chrome
+1. Click the LinkScreen icon in Chrome
 2. Set filters:
 
    * Time posted

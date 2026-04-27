@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  console.log("🚀 JobF1 loaded");
+  console.log("🚀 LinkScreen loaded");
 
   let lastUrl = location.href;
   let currentJobId = null;

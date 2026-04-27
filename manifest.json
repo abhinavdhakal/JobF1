@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "JobF1 for LinkedIn - Visa-Friendly Job Finder",
-  "version": "1.4",
-  "description": "Filter LinkedIn jobs by time, type, and visa sponsorship. Quickly find visa-friendly roles for F1 students on LinkedIn.",
+  "name": "LinkScreen for LinkedIn",
+  "version": "2.0",
+  "description": "Detects visa sponsorship and eligibility in LinkedIn job posts. Screens roles by posting time, keywords, and sponsorship language.",
   "permissions": ["tabs", "storage", "webNavigation", "activeTab"],
   "host_permissions": ["*://*.linkedin.com/*"],
   "background": {
